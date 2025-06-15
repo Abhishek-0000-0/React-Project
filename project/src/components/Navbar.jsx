@@ -38,8 +38,8 @@ const Navbar = () => {
             alt="Edu-Web Logo"
             className="w-11 h-11 group-hover:rotate-6 transition-transform duration-300"
           />
-          <span className="text-2xl font-bold text-gray-800 hidden sm:inline-block group-hover:text-blue-600 transition-colors">
-            Edu-Web
+          <span className="text-2xl font-bold text-amber-400 hidden sm:inline-block group-hover:text-red-400 transition-colors">
+            Lumina
           </span>
         </Link>
 

@@ -10,7 +10,7 @@ const Index = () => {
     <div className="flex flex-col items-center bg-gray-50">
       <section className="w-full max-w-6xl px-6 py-10 text-center">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-          Welcome to <span className="text-blue-600">EduPath</span> - Your
+          Welcome to <span className="text-amber-500">Lumina</span> - Your
           Gateway to Knowledge
         </h1>
 

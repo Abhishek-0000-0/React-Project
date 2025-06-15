@@ -1,24 +1,18 @@
-// src/layouts/AuthLayout.jsx
-import {
-  FaGraduationCap,
-  FaLightbulb,
-  FaUsers,
-  FaChartLine,
-} from "react-icons/fa";
+import { FaLightbulb } from "react-icons/fa";
 import { Outlet } from "react-router-dom";
 
 const AuthLayout = () => {
   return (
     <div className="min-h-screen bg-white flex">
-      {/* Left Column - Information */}
-      <div className="bg-[url(/Images/auth-2.jpg)] bg-cover bg-center hidden lg:block w-1/2 p-12 text-gray-100">
+      {/* Left Side Image Panel (Large Screens Only) */}
+      <div className="bg-[url(/Images/auth-2.jpg)] bg-cover bg-center hidden lg:block w-1/2 p-12 text-white">
         <div className="flex items-center justify-center mb-8">
-          <FaGraduationCap className="text-3xl mr-3" />
-          <span className="text-4xl font-bold">EduPath</span>
+          <FaLightbulb className="text-3xl mr-3 text-amber-300" />
+          <span className="text-4xl font-bold">Lumina</span>
         </div>
 
         <div className="max-w-md mx-auto h-[500px] flex flex-col items-center justify-center text-center">
-          <h2 className="text-3xl font-bold mb-6">Welcome to EduPath</h2>
+          <h2 className="text-3xl font-bold mb-6">Welcome to Lumina</h2>
           <p className="text-lg mb-10">
             Join thousands of students who are transforming their lives through
             education.
@@ -26,22 +20,27 @@ const AuthLayout = () => {
         </div>
       </div>
 
-      {/* Right Column - Form */}
-      <div className="w-full lg:w-1/2 flex flex-col justify-center py-12 px-6 sm:px-12">
-        <div className="sm:mx-auto sm:w-full sm:max-w-md">
+      <div className="w-full lg:w-1/2 relative flex flex-col justify-center py-12 px-6 sm:px-12">
+        <div className="absolute inset-0 bg-[url(/Images/auth-1.jpg)] bg-cover bg-center lg:bg-none"></div>
+        <div className="absolute inset-0 bg-white/30 lg:bg-transparent"></div>
+
+        <div className="relative z-10 sm:mx-auto sm:w-full sm:max-w-md">
           <div className="flex justify-center lg:hidden mb-8">
             <div className="flex items-center">
-              <FaGraduationCap className="text-blue-600 text-3xl mr-3" />
-              <span className="text-2xl font-bold text-gray-800">EduPath</span>
+              <FaLightbulb className="text-amber-300 text-3xl mr-3" />
+              <span className="text-2xl font-bold text-gray-800 text-center">
+                Lumina
+              </span>
             </div>
           </div>
 
-          <div className="bg-white lg:bg-transparent py-8 px-4 shadow-lg lg:shadow-none sm:rounded-xl sm:px-10">
+          <div className="py-8 px-4 shadow-lg lg:shadow-none sm:rounded-xl sm:px-10 bg-white/60 lg:bg-transparent">
             <Outlet />
           </div>
         </div>
 
-        <div className="mt-8 text-center text-sm text-gray-600">
+        {/* Footer */}
+        <div className="relative z-10 mt-8 text-center text-sm text-gray-600">
           <p>© {new Date().getFullYear()} EduPath. All rights reserved.</p>
         </div>
       </div>
