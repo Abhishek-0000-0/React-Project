@@ -8,7 +8,7 @@ const AuthLayout = () => {
       <div className="bg-[url(/Images/auth-2.jpg)] bg-cover bg-center hidden lg:block w-1/2 p-12 text-white">
         <div className="flex items-center justify-center mb-8">
           <FaLightbulb className="text-3xl mr-3 text-amber-300" />
-          <span className="text-4xl font-bold">Lumina</span>
+          <span className="text-4xl font-bold text-orange-500">Lumina</span>
         </div>
 
         <div className="max-w-md mx-auto h-[500px] flex flex-col items-center justify-center text-center">
@@ -28,7 +28,7 @@ const AuthLayout = () => {
           <div className="flex justify-center lg:hidden mb-8">
             <div className="flex items-center">
               <FaLightbulb className="text-amber-300 text-3xl mr-3" />
-              <span className="text-2xl font-bold text-gray-800 text-center">
+              <span className="text-2xl font-bold text-orange-500 text-center">
                 Lumina
               </span>
             </div>
