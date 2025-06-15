@@ -16,7 +16,11 @@ const LoginForm = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    navigate("/");
+    if (data.email === "test@gmail.com" && data.password === "test123") {
+      navigate("/");
+    } else {
+      alert("Invalid email or password");
+    }
   };
 
   return (
@@ -78,23 +82,6 @@ const LoginForm = () => {
               {errors.password.message}
             </p>
           )}
-        </div>
-
-        <div className="flex items-center justify-between">
-          <div className="flex items-center">
-            <input
-              id="remember-me"
-              type="checkbox"
-              className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-              {...register("remember")}
-            />
-            <label
-              htmlFor="remember-me"
-              className="ml-2 block text-sm text-gray-700"
-            >
-              Remember me
-            </label>
-          </div>
         </div>
 
         <button

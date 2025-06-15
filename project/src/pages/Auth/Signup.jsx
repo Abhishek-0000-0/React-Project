@@ -44,7 +44,7 @@ const SignupForm = () => {
                 },
               })}
               className="pl-10 block w-full border border-gray-300 rounded-md py-2 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-              placeholder="John Doe"
+              placeholder="First Last"
             />
           </div>
           {errors.name && (
