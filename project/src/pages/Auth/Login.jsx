@@ -1,8 +1,10 @@
 import { useForm } from "react-hook-form";
 import { FaEnvelope, FaLock } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+
 const LoginForm = () => {
+  const navigate = useNavigate();
   useEffect(() => {
     document.title = "Login | EduPath";
   }, []);
@@ -14,6 +16,7 @@ const LoginForm = () => {
 
   const onSubmit = (data) => {
     console.log(data);
+    navigate("/");
   };
 
   return (
