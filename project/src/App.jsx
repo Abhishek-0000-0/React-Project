@@ -1,28 +1,44 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Index from "./pages/Main";
-import About from "./pages/Main/About";
-import Contact from "./pages/Main/Contact";
-import Services from "./pages/Main/Services";
-import Login from "./pages/Auth/Login";
-import Signup from "./pages/Auth/Signup";
-import Main from "./components/Layouts/main";
-import Auth from "./components/Layouts/Auth";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import NotFound from "./Pages/NotFound";
+import Index from "./Pages/Main";
+import About from "./Pages/Main/About";
+import Contact from "./Pages/Main/Contact";
+import Services from "./Pages/Main/Services";
+import Login from "./Pages/Auth/Login";
+import Signup from "./Pages/Auth/Signup";
+import Home from "./Pages/Home/Home";
+import Main from "./Components/Layouts/Main";
+import Auth from "./Components/Layouts/Auth";
+import Layout from "./Components/Layouts/Home";
+
+const router = createBrowserRouter([
+  {
+    element: <Main />,
+    children: [
+      { path: "/", element: <Index /> },
+      { path: "/about", element: <About /> },
+      { path: "/contact", element: <Contact /> },
+      { path: "/services", element: <Services /> },
+    ],
+  },
+  {
+    element: <Auth />,
+    children: [
+      { path: "/login", element: <Login /> },
+      { path: "/signup", element: <Signup /> },
+    ],
+  },
+  {
+    element: <Layout />,
+    children: [
+      { path: "/home", element: <Home /> },
+    ],
+  },
+  { path: "*", element: <NotFound /> },
+], {
+  future: { v7_startTransition: true }, // Required for useNavigation
+});
 
 export default function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route element={<Main />}>
-          <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/services" element={<Services />} />
-        </Route>
-        <Route element={<Auth />}>
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-        </Route>
-      </Routes>
-    </Router>
-  );
+  return <RouterProvider router={router} />;
 }

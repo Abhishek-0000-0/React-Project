@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import Banner from "../../components/Banner";
+import Banner from "../../Components/Banner";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Home | EduPath";
+    document.title = "Welcome | EduPath";
   }, []);
 
   return (

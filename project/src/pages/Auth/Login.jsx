@@ -17,7 +17,7 @@ const LoginForm = () => {
   const onSubmit = (data) => {
     console.log(data);
     if (data.email === "test@gmail.com" && data.password === "test123") {
-      navigate("/");
+      navigate("/home");
     } else {
       alert("Invalid email or password");
     }

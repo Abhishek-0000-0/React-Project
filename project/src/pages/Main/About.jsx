@@ -5,7 +5,7 @@ import {
   FaBookOpen,
   FaUsers,
 } from "react-icons/fa";
-import Card from "../../components/Cards/About";
+import Card from "../../Components/Cards/About";
 import { Link } from "react-router-dom";
 
 const AboutPage = () => {
@@ -37,8 +37,10 @@ const AboutPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="bg-[url(/Images/about.jpg)] bg-cover bg-center w-full relative text-black py-20">
-        <div className="container mx-auto px-6 text-center">
+      <div className="group overflow-hidden w-full relative text-black py-20">
+        <div className="absolute inset-0 bg-[url('/Images/about.jpg')] bg-cover bg-center transform transition-transform duration-500 ease-in-out group-hover:scale-105"></div>
+
+        <div className="relative z-10 container mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             About Our Educational Platform
           </h1>

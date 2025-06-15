@@ -1,7 +1,7 @@
 import { FaChalkboardTeacher, FaLaptopCode } from "react-icons/fa";
 import { MdScience } from "react-icons/md";
 import { useEffect } from "react";
-import Card from "../../components/Cards/Services";
+import Card from "../../Components/Cards/Services";
 
 const ServicesPage = () => {
   useEffect(() => {
@@ -11,7 +11,8 @@ const ServicesPage = () => {
     {
       icon: <FaChalkboardTeacher className="text-blue-600 text-4xl" />,
       title: "Expert-Led Courses",
-      description: "Learn from industry professionals and academic experts with real-world experience.",
+      description:
+        "Learn from industry professionals and academic experts with real-world experience.",
       features: [
         "Interactive video lectures",
         "Live Q&A sessions",
@@ -21,7 +22,8 @@ const ServicesPage = () => {
     {
       icon: <FaLaptopCode className="text-green-600 text-4xl" />,
       title: "Tech & Coding Programs",
-      description: "Master in-demand tech skills with our comprehensive coding curriculum.",
+      description:
+        "Master in-demand tech skills with our comprehensive coding curriculum.",
       features: [
         "Web development",
         "Data science",
@@ -32,7 +34,8 @@ const ServicesPage = () => {
     {
       icon: <MdScience className="text-purple-600 text-4xl" />,
       title: "STEM Education",
-      description: "Engaging science, technology, engineering, and math programs for all ages.",
+      description:
+        "Engaging science, technology, engineering, and math programs for all ages.",
       features: [
         "Hands-on experiments",
         "Project-based learning",
@@ -43,8 +46,10 @@ const ServicesPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="bg-[url(/Images/services.jpg)] bg-cover bg-center w-full relative text-white py-20">
-        <div className="container mx-auto px-6 text-center">
+      <div className="group overflow-hidden w-full relative text-white py-20">
+        <div className="absolute inset-0 bg-[url('/Images/services.jpg')] bg-cover bg-center transform transition-transform duration-500 ease-in-out group-hover:scale-105"></div>
+
+        <div className="relative z-10 container mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Our Educational Services
           </h1>
@@ -52,6 +57,8 @@ const ServicesPage = () => {
             Discover a world of learning opportunities tailored to your needs
           </p>
         </div>
+
+        <div className="absolute inset-0 bg-black/30 backdrop-blur-sm z-0"></div>
       </div>
 
       <div className="container mx-auto px-6 py-16">
@@ -74,6 +81,5 @@ const ServicesPage = () => {
     </div>
   );
 };
-
 
 export default ServicesPage;
