@@ -34,14 +34,14 @@ const AuthLayout = () => {
             </div>
           </div>
 
-          <div className="py-8 px-4 shadow-lg lg:shadow-none sm:rounded-xl sm:px-10 bg-white/60 lg:bg-transparent">
+          <div className="py-8 px-4 shadow-lg lg:shadow-none sm:rounded-xl sm:px-10  bg-gradient-to-b from-cyan-100 via-cyan-200 to-cyan-300 opacity-95 lg:bg-transparent">
             <Outlet />
           </div>
         </div>
 
         {/* Footer */}
         <div className="relative z-10 mt-8 text-center text-sm text-gray-600">
-          <p>© {new Date().getFullYear()} EduPath. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Lumina. All rights reserved.</p>
         </div>
       </div>
     </div>

@@ -41,7 +41,7 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-800 mt-6">
-        <p className="text-center text-sm text-gray-500 py-4">&copy; {new Date().getFullYear()} EduSmart. All rights reserved.</p>
+        <p className="text-center text-sm text-gray-500 py-4">&copy; {new Date().getFullYear()} Lumina. All rights reserved.</p>
       </div>
     </footer>
   );

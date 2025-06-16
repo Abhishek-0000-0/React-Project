@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Welcome from "./Welcome";
 
 const Banner = () => {
   return (
