@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 import Card from "../../Components/Cards/Contact";
 
-const ContactPage = () => {
+const Page = () => {
   useEffect(() => {
     document.title = "Contact | EduPath";
   }, []);
@@ -60,4 +60,4 @@ const ContactPage = () => {
   );
 };
 
-export default ContactPage;
+export default Page;

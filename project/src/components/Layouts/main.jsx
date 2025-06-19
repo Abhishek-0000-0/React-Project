@@ -1,8 +1,8 @@
 import { Outlet } from "react-router-dom";
-import Navbar from "../Navbar";
-import Footer from "../Footer";
+import Navbar from "../Navbar/Main";
+import Footer from "../Footer/Main";
 
-const Main = () => {
+const Layout = () => {
 
   return (
     <div className="bg-black text-white min-h-screen flex flex-col">
@@ -15,4 +15,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Layout;

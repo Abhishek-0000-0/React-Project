@@ -8,7 +8,7 @@ import {
 import Card from "../../Components/Cards/About";
 import { Link } from "react-router-dom";
 
-const AboutPage = () => {
+const Page = () => {
   useEffect(() => {
     document.title = "About | EduPath";
   }, []);
@@ -91,4 +91,4 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export default Page;

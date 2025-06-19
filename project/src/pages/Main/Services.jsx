@@ -1,9 +1,9 @@
+import { useEffect } from "react";
 import { FaChalkboardTeacher, FaLaptopCode } from "react-icons/fa";
 import { MdScience } from "react-icons/md";
-import { useEffect } from "react";
 import Card from "../../Components/Cards/Services";
 
-const ServicesPage = () => {
+const Page = () => {
   useEffect(() => {
     document.title = "Services | EduPath";
   }, []);
@@ -82,4 +82,4 @@ const ServicesPage = () => {
   );
 };
 
-export default ServicesPage;
+export default Page;

@@ -3,7 +3,7 @@ import { FaUser, FaEnvelope, FaLock } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
-const SignupForm = () => {
+const Form = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -177,4 +177,4 @@ const SignupForm = () => {
   );
 };
 
-export default SignupForm;
+export default Form;

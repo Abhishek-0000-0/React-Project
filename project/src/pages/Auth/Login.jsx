@@ -3,7 +3,7 @@ import { FaEnvelope, FaLock } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
-const LoginForm = () => {
+const Form = () => {
   const navigate = useNavigate();
   useEffect(() => {
     document.title = "Login | EduPath";
@@ -105,4 +105,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default Form;

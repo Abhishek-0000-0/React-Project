@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
-import Banner from "../../Components/Banner";
-import Features from "../../Components/Cards/Features";
+import Banner from "../../Components/Banner/Main";
+import Features from "../../Components/Feature";
 import Welcome from "../../Components/Welcome";
 
-const Index = () => {
+const Page = () => {
   useEffect(() => {
-    document.title = "Welcome | EduPath";
+    document.title = "Welcome | Lumina";
   }, []);
 
   return (
@@ -17,4 +17,4 @@ const Index = () => {
   );
 };
  
-export default Index;
+export default Page;

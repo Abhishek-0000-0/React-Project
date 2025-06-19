@@ -1,10 +1,9 @@
 import { FaLightbulb } from "react-icons/fa";
 import { Outlet } from "react-router-dom";
 
-const AuthLayout = () => {
+const Layout = () => {
   return (
     <div className="min-h-screen bg-white flex">
-      {/* Left Side Image Panel (Large Screens Only) */}
       <div className="bg-[url(/Images/auth-2.jpg)] bg-cover bg-center hidden lg:block w-1/2 p-12 text-white">
         <div className="flex items-center justify-center mb-8">
           <FaLightbulb className="text-3xl mr-3 text-amber-300" />
@@ -39,7 +38,6 @@ const AuthLayout = () => {
           </div>
         </div>
 
-        {/* Footer */}
         <div className="relative z-10 mt-8 text-center text-sm text-gray-600">
           <p>© {new Date().getFullYear()} Lumina. All rights reserved.</p>
         </div>
@@ -48,4 +46,4 @@ const AuthLayout = () => {
   );
 };
 
-export default AuthLayout;
+export default Layout;
