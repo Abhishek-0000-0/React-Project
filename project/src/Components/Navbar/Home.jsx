@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { FiMenu, FiX, FiUser, FiLogOut, FiSearch } from "react-icons/fi";
 import Menu from "../Menu/Home";
 import { FaUser } from "react-icons/fa";
+import SearchModule from "../Search";
 
 const Navbar = () => {
   const location = useLocation();
@@ -62,16 +63,7 @@ const Navbar = () => {
             </h1>
           </Link>
 
-          <form className="hidden md:flex items-center bg-gray-100 text-gray-800 px-4 py-2 rounded-full border border-gray-300 w-full max-w-md mx-6">
-            <FiSearch className="text-gray-500" />
-            <input
-              type="text"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              placeholder="Search for courses, instructors..."
-              className="ml-2 bg-transparent outline-none w-full text-sm placeholder-gray-500"
-            />
-          </form>
+         <SearchModule />
 
           <div className="hidden md:flex items-center gap-3">
             <Link
