@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Card1 from "../../Components/Cards/Course_1";
+import Card from "../../Components/Cards/Course_1";
 import {
   WEB,
   DATASCIENCE,
@@ -52,7 +52,7 @@ export default function Page() {
       {category ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {category.data.map((course, index) => (
-            <Card1
+            <Card
               key={index}
               {...course}
               className="h-full"

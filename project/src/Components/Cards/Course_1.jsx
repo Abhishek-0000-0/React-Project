@@ -18,6 +18,7 @@ const Card = ({
   duration,
   isPremium = false,
   isBestseller = false,
+  youtubeUrl = "https://www.youtube.com",
 }) => {
   const renderStars = () => {
     const stars = [];
@@ -99,15 +100,17 @@ const Card = ({
             )}
           </div>
 
-          <button
-            className={`w-full py-2 px-4 rounded-md font-medium text-sm transition-colors ${
-              isPremium
-                ? "bg-purple-600 hover:bg-purple-700 text-white"
-                : "bg-blue-600 hover:bg-blue-700 text-white"
-            }`}
-          >
-            Enroll Now
-          </button>
+          <a href={`${youtubeUrl}`} target="_blank">
+            <button
+              className={`w-full py-2 px-4 rounded-md font-medium text-sm transition-colors ${
+                isPremium
+                  ? "bg-purple-600 hover:bg-purple-700 text-white"
+                  : "bg-blue-600 hover:bg-blue-700 text-white"
+              }`}
+            >
+              Enroll Now
+            </button>
+          </a>
         </div>
       </div>
     </div>

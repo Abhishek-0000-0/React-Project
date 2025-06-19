@@ -7,3 +7,17 @@
 .scrollbar-hide::-webkit-scrollbar {
   display: none; 
 }
+/* Hide scrollbar but keep functionality */
+html {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+html::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Opera */
+}
+
+body {
+  overflow-y: scroll; /* Force scrollbar space (prevent layout shift) */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}

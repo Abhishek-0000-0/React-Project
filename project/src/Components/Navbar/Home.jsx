@@ -46,7 +46,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`sticky w-full top-0 z-50 bg-white mt-5 transition-all duration-300 shadow-md ${
+      className={`sticky w-full top-0 z-50 bg-white transition-all duration-300 shadow-md ${
         scrolled ? "shadow-md" : "border-b border-gray-200"
       }`}
     >
