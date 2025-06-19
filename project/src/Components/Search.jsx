@@ -19,9 +19,7 @@ const SearchModule = () => {
     }
 
     const results = allCourses.filter(course =>
-      course.title.toLowerCase().includes(term) ||
-      course.instructor.toLowerCase().includes(term) ||
-      course.topic?.toLowerCase().includes(term)
+      course.title.toLowerCase().includes(term) 
     );
 
     setSearchResults(results);
@@ -36,7 +34,6 @@ const SearchModule = () => {
 
   return (
     <>
-      {/* Compact Search Box inside Navbar */}
       <div className="relative hidden md:block">
         <input
           type="text"
@@ -47,11 +44,10 @@ const SearchModule = () => {
         <FiSearch className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
       </div>
 
-      {/* Fullscreen Overlay Search */}
       {isFocused && (
         <div className="fixed inset-0 z-50 bg-white/95 overflow-y-auto p-6 md:p-10">
           <div className="max-w-5xl mx-auto">
-            {/* Close Button */}
+
             <div className="flex justify-end mb-6">
               <button
                 onClick={handleClose}
@@ -61,7 +57,6 @@ const SearchModule = () => {
               </button>
             </div>
 
-            {/* Search Input */}
             <div className="relative mb-8">
               <FiSearch className="absolute left-6 top-1/2 transform -translate-y-1/2 text-gray-400 text-xl" />
               <input
@@ -74,7 +69,6 @@ const SearchModule = () => {
               />
             </div>
 
-            {/* Search Results */}
             <div>
               {searchResults.length > 0 ? (
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
