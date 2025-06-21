@@ -78,7 +78,11 @@ const Navbar = () => {
           className="md:hidden p-2 text-gray-700 rounded-lg hover:bg-gray-100"
           aria-label="Toggle menu"
         >
-          {isOpen ? <FiX className="text-xl" /> : <FiMenu className="text-xl" />}
+          {isOpen ? (
+            <FiX className="text-xl" />
+          ) : (
+            <FiMenu className="text-xl" />
+          )}
         </button>
       </div>
 

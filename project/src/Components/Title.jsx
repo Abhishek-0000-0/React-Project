@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Title = () => {
   return (
     <section className="relative min-h-[500px] md:min-h-[600px] bg-[url('/Images/studnet.jpg')] bg-cover bg-center rounded-2xl flex items-center">
@@ -16,7 +18,7 @@ const Title = () => {
 
             <div className="md:w-1/2 flex justify-start md:justify-end">
               <button className="px-8 py-3 bg-blue-600 text-white text-lg font-semibold rounded-xl hover:bg-blue-700 transition duration-300">
-                Explore Programs
+                <Link to={"/events"}>Explore Programs</Link>
               </button>
             </div>
           </div>

@@ -118,7 +118,7 @@ export default function Footer() {
 
       <div className="border-t border-gray-300">
         <div className="container mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-600">
-          <p>&copy; {new Date().getFullYear()} Lumina. All rights reserved.</p>
+          <p>&copy; 2025 Lumina. All rights reserved.</p>
           <p className="mt-2 sm:mt-0">Lumina Inc, Mountain View, CA</p>
         </div>
       </div>

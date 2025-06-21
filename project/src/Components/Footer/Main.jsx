@@ -40,13 +40,13 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-4">Contact</h3>
           <ul className="space-y-3 text-sm text-gray-400">
             <li className="flex items-center gap-2">
-              <FiPhone /> +91 98765 43210
+              <FiPhone /> +91 99009 09890
             </li>
             <li className="flex items-center gap-2">
-              <FiMail /> support@edusmart.com
+              <FiMail /> support@lumina.com
             </li>
             <li className="flex items-center gap-2">
-              <FiMapPin /> New Delhi, India
+              <FiMapPin /> Ananda, India
             </li>
           </ul>
         </div>
@@ -72,7 +72,7 @@ const Footer = () => {
 
       <div className="border-t border-gray-800 mt-6">
         <p className="text-center text-sm text-gray-500 py-4">
-          &copy; {new Date().getFullYear()} Lumina. All rights reserved.
+          &copy; 2025 Lumina. All rights reserved.
         </p>
       </div>
     </footer>

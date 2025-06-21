@@ -45,7 +45,7 @@ const SearchModule = () => {
       </div>
 
       {isFocused && (
-        <div className="fixed inset-0 z-50 bg-white/95 overflow-y-auto p-6 md:p-10">
+        <div className="fixed inset-0 z-50 bg-white/96 overflow-y-auto p-6 md:p-10">
           <div className="max-w-5xl mx-auto">
 
             <div className="flex justify-end mb-6">
@@ -62,7 +62,7 @@ const SearchModule = () => {
               <input
                 type="text"
                 autoFocus
-                placeholder="Search courses, instructors, topics..."
+                placeholder="Search courses, topics..."
                 value={searchTerm}
                 onChange={handleSearch}
                 className="w-full px-14 py-4 text-lg border border-gray-300 rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-blue-200"

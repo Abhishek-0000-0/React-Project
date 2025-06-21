@@ -39,7 +39,7 @@ const Layout = () => {
         </div>
 
         <div className="relative z-10 mt-8 text-center text-sm text-gray-600">
-          <p>© {new Date().getFullYear()} Lumina. All rights reserved.</p>
+          <p>© 2025 Lumina. All rights reserved.</p>
         </div>
       </div>
     </div>

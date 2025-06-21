@@ -1,14 +1,19 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaUser, FaEnvelope, FaLock } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import axios from "axios";
+import Loading from "../../Components/Loading";
 
 const Form = () => {
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     document.title = "Sign-Up | EduPath";
   }, []);
+
   const {
     register,
     handleSubmit,
@@ -16,10 +21,45 @@ const Form = () => {
     watch,
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
-    navigate("/home");
+  const onSubmit = async (data) => {
+    setIsLoading(true);
+    try {
+      const response = await axios.post(
+        "http://localhost:1100/api/v1/users/sign-up",
+        data
+      );
+
+      if (response.status >= 200 && response.status < 300) {
+        if (response.data.token) {
+          localStorage.setItem("token", response.data.token);
+        }
+        if (response.data.user) {
+          localStorage.setItem("user", JSON.stringify(response.data.user));
+        }
+        navigate("/home");
+      } else {
+        alert("Sign up failed: " + (response.data.message || "Unknown error"));
+      }
+    } catch (error) {
+      if (error.response) {
+        const errorMessage =
+          error.response.data?.message ||
+          error.response.data?.error ||
+          "Sign up failed";
+        alert(errorMessage);
+      } else if (error.request) {
+        alert("No response from server. Please check your connection.");
+      } else {
+        alert("Error: " + error.message);
+      }
+    } finally {
+      setIsLoading(false);
+    }
   };
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   return (
     <div className="max-w-md w-full space-y-6">
@@ -158,9 +198,12 @@ const Form = () => {
 
         <button
           type="submit"
-          className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          disabled={isLoading}
+          className={`w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 ${
+            isLoading ? "opacity-50 cursor-not-allowed" : ""
+          }`}
         >
-          Create Account
+          {isLoading ? "Creating account..." : "Create Account"}
         </button>
       </form>
 

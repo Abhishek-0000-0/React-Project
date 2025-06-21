@@ -12,7 +12,7 @@ const Banner = () => {
           Explore a wide range of courses, tutorials, and learning paths to build your future. Learn anything, anytime, anywhere.
         </p>
 
-        <div className="flex flex-col sm:flex-row w-full max-w-xl gap-3 sm:gap-4">
+        <div className="flex sm:flex-row w-full max-w-xl gap-3 sm:gap-4">
           <div className="relative flex-1">
             <input
               type="text"
@@ -21,7 +21,7 @@ const Banner = () => {
             />
             <FaSearch className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 sm:hidden" />
           </div>
-          <button className="flex items-center justify-center gap-2 sm:gap-3 bg-blue-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200">
+          <button className="flex items-center justify-center gap-2 sm:gap-3 bg-blue-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 max-w-2xl">
             <FaSearch className="hidden sm:block" />
             <span>Search</span>
           </button>

@@ -42,12 +42,6 @@ const Page = () => {
       price: "$49",
     },
   ];
-
-  const formatDate = (dateString) => {
-    const options = { year: "numeric", month: "long", day: "numeric" };
-    return new Date(dateString).toLocaleDateString(undefined, options);
-  };
-
   return (
     <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -93,7 +87,7 @@ const Page = () => {
                 <div className="space-y-3 text-sm text-gray-700">
                   <div className="flex items-center">
                     <FiCalendar className="mr-2 text-gray-500" />
-                    <span>{formatDate(event.date)}</span>
+                    <span>{event.date}</span>
                   </div>
                   <div className="flex items-center">
                     <FiClock className="mr-2 text-gray-500" />
@@ -109,7 +103,7 @@ const Page = () => {
                   </div>
                 </div>
 
-                <button className="mt-6 w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md transition">
+                <button className="mt-6 w-full bg-blue-600 hover:bg-blue-</div>700 text-white py-2 px-4 rounded-md transition">
                   Register Now
                 </button>
               </div>

@@ -12,7 +12,7 @@ const Banner = () => {
           </h1>
           <p className="text-lg mb-6 text-gray-800">
             Join thousands of students gaining knowledge and building careers
-            with EduSmart.
+            with Lumina.
           </p>
           <div className="flex-2 justify-end items-center space-x-6">
             <Link

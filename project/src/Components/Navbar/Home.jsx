@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { FiMenu, FiX, FiUser, FiLogOut, FiSearch } from "react-icons/fi";
+import { FiMenu, FiX, FiLogOut,  } from "react-icons/fi";
 import Menu from "../Menu/Home";
 import { FaUser } from "react-icons/fa";
 import SearchModule from "../Search";
@@ -10,7 +10,6 @@ const Navbar = () => {
 
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [searchTerm, setSearchTerm] = useState("");
   const [showDropdown, setShowDropdown] = useState(false);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
 
@@ -108,21 +107,11 @@ const Navbar = () => {
 
         {isOpen && (
           <>
-            <form className="md:hidden flex items-center bg-gray-100 px-4 py-2 rounded-full border border-gray-300 my-3 mx-2">
-              <FiSearch className="text-gray-500" />
-              <input
-                type="text"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                placeholder="Search..."
-                className="ml-2 bg-transparent outline-none w-full text-sm"
-              />
-            </form>
-
-            <div className="md:hidden flex flex-col gap-3 px-2 py-4 border-t border-gray-200">
-              <button className="w-full cursor-pointer flex items-center justify-center gap-2 px-4 py-2 text-sm border border-gray-800 rounded-md hover:text-blue-600 hover:border-blue-600">
-                <Link to={"/"}>
-                  <FiLogOut /> Logout
+            <div className="md:hidden flex gap-3 px-2 py-4 border-t border-gray-200">
+              <button className="w-full cursor-pointer  px-4 py-2 text-sm border border-gray-800 rounded-md hover:text-blue-600 hover:border-blue-600">
+                <Link to={"/"} className="flex items-center justify-center gap-2 ">
+                  <FiLogOut /> 
+                  <p>Logout</p>
                 </Link>
               </button>
             </div>
