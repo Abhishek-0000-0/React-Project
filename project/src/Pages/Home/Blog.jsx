@@ -46,7 +46,6 @@ const Sect_1 = () => {
   return (
     <section className="w-full px-4 py-12 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
       <div className="w-full max-w-7xl mx-auto">
-        {/* Header */}
         <div className="mb-8 sm:mb-10 md:mb-12 text-center md:text-left">
           <span className="text-blue-600 text-xs sm:text-sm font-medium uppercase tracking-wider">
             What We Do
@@ -56,9 +55,7 @@ const Sect_1 = () => {
           </h2>
         </div>
 
-        {/* Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-stretch">
-          {/* Left Feature Card */}
           <div className="group cursor-pointer w-full">
             <div className="rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover:shadow-xl w-full">
               <img
@@ -75,12 +72,11 @@ const Sect_1 = () => {
             </span>
           </div>
 
-          {/* Right Article Cards */}
           <div className="flex flex-col gap-4 sm:gap-5 md:gap-6 w-full">
             {articles.map(({ id, image, title, description, tag }) => (
               <div
                 key={id}
-                className="flex flex-col xs:flex-row gap-3 sm:gap-4 items-start rounded-lg sm:rounded-xl shadow-sm sm:shadow-md bg-white p-3 sm:p-4 hover:shadow-lg transition-shadow duration-300 border border-gray-100 hover:border-blue-100 w-full"
+                className="flex xs:flex-row gap-3 sm:gap-4 items-start rounded-lg sm:rounded-xl shadow-sm sm:shadow-md bg-white p-3 sm:p-4 hover:shadow-lg transition-shadow duration-300 border border-gray-100 hover:border-blue-100 w-full"
               >
                 <img
                   src={image}
