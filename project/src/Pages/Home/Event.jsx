@@ -3,8 +3,8 @@ import { FiCalendar, FiMapPin, FiClock, FiUser } from "react-icons/fi";
 
 const Page = () => {
   useEffect(() => {
-      document.title = "Events | Lumina";
-    }, []);
+    document.title = "Events | Lumina";
+  }, []);
   const events = [
     {
       id: 1,
@@ -115,45 +115,6 @@ const Page = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="bg-white shadow-lg rounded-lg p-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">
-            Can't find what you're looking for?
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-lg font-medium text-gray-900 mb-3">
-                Host Your Own Event
-              </h3>
-              <p className="text-gray-600 mb-4">
-                Want to share your knowledge with our community? Apply to host a
-                workshop or talk.
-              </p>
-              <button className="bg-gray-100 hover:bg-gray-200 text-gray-800 py-2 px-4 rounded-md transition">
-                Become a Speaker
-              </button>
-            </div>
-            <div>
-              <h3 className="text-lg font-medium text-gray-900 mb-3">
-                Get Event Updates
-              </h3>
-              <p className="text-gray-600 mb-4">
-                Subscribe to our newsletter to stay informed about upcoming
-                events.
-              </p>
-              <div className="flex">
-                <input
-                  type="email"
-                  placeholder="Your email address"
-                  className="flex-1 border border-gray-300 rounded-l-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-                <button className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-r-md transition">
-                  Subscribe
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
