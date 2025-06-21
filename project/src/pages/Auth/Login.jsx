@@ -4,16 +4,16 @@ import { FaEnvelope, FaLock } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import axios from "axios";
-import Loading from "../../Components/Loading"; // Make sure the path is correct
+import Loading from "../../Components/Loading";
 
 const Form = () => {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
-  
+
   useEffect(() => {
     document.title = "Login | EduPath";
   }, []);
-  
+
   const {
     register,
     handleSubmit,
@@ -23,39 +23,34 @@ const Form = () => {
   const onSubmit = async (data) => {
     setIsLoading(true);
     try {
-      const response = await axios.post("http://localhost:1100/api/v1/users/sign-in", data);
-      
-      // Check for successful response (status code 2xx)
+      const response = await axios.post(
+        "http://localhost:1100/api/v1/users/sign-in",
+        data
+      );
+
       if (response.status >= 200 && response.status < 300) {
-        // Store token if your API returns one
         if (response.data.token) {
-          localStorage.setItem('token', response.data.token);
+          localStorage.setItem("token", response.data.token);
         }
-        
-        // Store user data if needed
+
         if (response.data.user) {
-          localStorage.setItem('user', JSON.stringify(response.data.user));
+          localStorage.setItem("user", JSON.stringify(response.data.user));
         }
-        
+
         navigate("/home");
       } else {
-        // Handle unexpected successful status codes
         alert("Login failed: " + (response.data.message || "Unknown error"));
       }
     } catch (error) {
-      // Handle different types of errors
       if (error.response) {
-        // The request was made and the server responded with a status code
-        // that falls out of the range of 2xx
-        const errorMessage = error.response.data?.message || 
-                           error.response.data?.error || 
-                           "Invalid email or password";
+        const errorMessage =
+          error.response.data?.message ||
+          error.response.data?.error ||
+          "Invalid email or password";
         alert(errorMessage);
       } else if (error.request) {
-        // The request was made but no response was received
         alert("No response from server. Please check your connection.");
       } else {
-        // Something happened in setting up the request that triggered an Error
         alert("Error: " + error.message);
       }
     } finally {
@@ -74,7 +69,6 @@ const Form = () => {
       </h2>
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-        {/* Email field */}
         <div>
           <label className="block text-sm font-medium text-gray-700">
             Email
@@ -101,7 +95,6 @@ const Form = () => {
           )}
         </div>
 
-        {/* Password field */}
         <div>
           <label className="block text-sm font-medium text-gray-700">
             Password

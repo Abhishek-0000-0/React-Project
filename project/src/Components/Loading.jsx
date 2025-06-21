@@ -1,5 +1,5 @@
 import React from "react";
-import { FaSpinner, FaBookOpen, FaAtom } from "react-icons/fa";
+import { FaBookOpen } from "react-icons/fa";
 
 const Loading = () => {
   return (
